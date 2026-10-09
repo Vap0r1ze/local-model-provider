@@ -109,6 +109,25 @@ local-model-provider/
 
 ## Submitting Changes
 
+### GitHub Releases
+
+1. Update `version` in `package.json` to the version you want to release.
+2. Commit the change and push it to GitHub.
+3. Tag that commit with the exact matching `vVERSION` and push the tag, for example:
+   ```bash
+   git tag v1.1.4
+   git push origin v1.1.4
+   ```
+
+The release workflow runs tests and TypeScript checks, packages the extension, and
+publishes generated release notes with `local-model-provider-VERSION.vsix` under
+[GitHub Releases](https://github.com/Vap0r1ze/local-model-provider/releases).
+Download the VSIX there and use VS Code's **Extensions: Install from VSIX...** command.
+Rerunning the workflow replaces the asset on an existing release. Prerelease
+versions supported by the extension packager are marked as prereleases, not latest.
+No additional secret is needed: publishing uses the automatic `GITHUB_TOKEN`.
+This does not publish to the VS Code Marketplace or Open VSX.
+
 ### Pull Request Process
 
 1. Fork the repository

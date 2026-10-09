@@ -9,6 +9,7 @@ src/**
 **/*.ts
 **/*.map
 tsconfig.json
+tsconfig.test.json
 
 # Linters/formatters/configs
 eslint.config.mjs
@@ -26,6 +27,7 @@ pnpm-lock.yaml
 # Tests and docs (not required in VSIX)
 test/**
 tests/**
+out-test/**
 docs/**
 CONTRIBUTING.md
 CODE_OF_CONDUCT.md
